@@ -43,7 +43,7 @@
         </div>
         <div class="contact">
             <div class="detail">
-                <a href=""><img src="./image/电话.png" alt="" onclick="showQRCode(event)"></a>
+                <a href=""><img src="./image/电话.png" alt=""></a>
                 <p>+44 7392328447</p>                 
             </div>
             <div class="detail">
@@ -55,45 +55,6 @@
                 <p>Holiday Guo</p>
             </div> 
             <!-- 全屏二维码图片容器，初始隐藏 -->
-            <div id="qrCodeFullscreen" class="qr-code-fullscreen" onclick="hideQRCode(event)">
-                <img src="./image/微信图片_20241029160933.jpg" alt="二维码图片">
-            </div>
-            <script>
-                // 设置标志来控制二维码的显示状态
-                let isQRCodeVisible = false;
-
-                // 显示全屏二维码
-                function showQRCode(event) {
-                 event.stopPropagation(); // 阻止事件冒泡
-                 const qrCodeFullscreen = document.getElementById("qrCodeFullscreen");
-                 qrCodeFullscreen.style.display = "flex";  // 显示二维码
-                 isQRCodeVisible = true;  // 设置二维码显示标志
-                }
-
-                // 隐藏全屏二维码
-                function hideQRCode(event) {
-                  event.stopPropagation(); // 阻止事件冒泡
-                 const qrCodeFullscreen = document.getElementById("qrCodeFullscreen");
-                 qrCodeFullscreen.style.display = "none";  // 隐藏二维码
-                 isQRCodeVisible = false;  // 设置二维码隐藏标志
-                }
-
-                // 全局点击事件监听器，确保导航栏点击不影响二维码显示
-                document.addEventListener("click", function(event) {
-                 const qrCodeFullscreen = document.getElementById("qrCodeFullscreen");
-                 const isQRCodeOpen = isQRCodeVisible;
-    
-                  // 检查点击的是否为电话图标、二维码本身或导航栏
-                 const isPhoneIconClick = event.target.matches('.detail img');
-                  const isNavbarClick = event.target.closest('.nav-links');
-                  const isQRCodeClick = event.target.closest('#qrCodeFullscreen');
-
-                  // 当二维码显示且点击的不是电话图标、二维码或导航栏时隐藏二维码
-                  if (isQRCodeOpen && !isPhoneIconClick && !isNavbarClick && !isQRCodeClick) {
-                      hideQRCode(event);
-                 }
-                });
-            </script>
         </div>
     </article>
 </body>
