@@ -1,0 +1,73 @@
+.main-container {
+    width: 840px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.title #hi h1 {
+    font-size: 60px;
+    margin-bottom: 25px;
+}
+
+.title h1 {
+    margin-top: -60px;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.contact {
+    display: flex;
+    gap: 150px;
+    max-width: 840px;
+    width: 100%;
+    justify-content: center;
+    margin-top: -50px;
+}
+
+.detail {
+    display: flex;
+    text-align: center;
+    margin-top: 100px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail img {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.detail p {
+    font-size: 18px;
+    display: flex;
+    text-align: center;
+}
+
+/* 全屏显示二维码的样式 */
+.qr-code-fullscreen {
+    display: none;                /* 初始隐藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4); /* 半透明背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.qr-code-fullscreen img {
+    width: 50%;                      /* 控制二维码大小，可调整 */
+    max-width: 300px;                 /* 设置最大宽度 */
+    border: 2px solid white;
+    border-radius: 8px;
+}

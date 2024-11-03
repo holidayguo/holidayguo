@@ -1,0 +1,25 @@
+.main-container {
+    width: 840px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin: 0 auto; 
+}
+
+.introducte {
+    max-width: 0 200px;
+    padding: 0 220px;
+    margin-top: 50px;
+}
+
+.introducte div {
+    margin: 20px auto;
+    
+}
+
+#hi {
+    margin-top: 60px;
+    font-size: 32px;
+    line-height: 1.2;
+    text-align: center;
+}
